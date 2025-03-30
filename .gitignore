@@ -1,0 +1,41 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+# Archivos de compilación
+/build/
+out/
+.gradle/
+.cxx/
+.externalNativeBuild/
+
+# Archivos de configuración de Android Studio
+.idea/
+
+# Dependencias de Gradle/*
+/captures/
+
+# Archivos de caché y temporales
+*.log
+*.tmp
+
+# Configuración de Firebase (credenciales)
+app/google-services.json
+
+# Archivos de firma y claves
+*.keystore
+*.jks
+
+# Configuración del sistema operativo
+Thumbs.db
