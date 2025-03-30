@@ -40,15 +40,26 @@ android {
 }
 
 dependencies {
-
+    // AndroidX Core
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
+
+    // Jetpack Compose
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+
+    // WorkManager
+    implementation("androidx.work:work-runtime-ktx:2.10.0")
+
+    // Health Connect API
+    implementation("androidx.health.connect:connect-client:1.1.0-beta01")
+    implementation(libs.androidx.connect.client.testing)
+
+    // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
