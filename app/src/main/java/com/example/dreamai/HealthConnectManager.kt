@@ -76,7 +76,6 @@ class HealthConnectManager(private val context: Context) {
     }
   }
 
-  @OptIn(ExperimentalFeatureAvailabilityApi::class)
   fun isFeatureAvailable(feature: Int): Boolean{
     return healthConnectClient
       .features

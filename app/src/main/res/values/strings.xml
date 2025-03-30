@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DREAM AI</string>
+    <string name="sleep_sessions">Sesiones de sueño</string>
 </resources>

@@ -51,13 +51,16 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.material3)
 
     // WorkManager
-    implementation("androidx.work:work-runtime-ktx:2.10.0")
+    implementation(libs.work.runtime.ktx)
 
     // Health Connect API
     implementation("androidx.health.connect:connect-client:1.1.0-beta01")
-    implementation(libs.androidx.connect.client.testing)
+    implementation(libs.androidx.navigation.runtime.android)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.compose.material3)
 
     // Testing
     testImplementation(libs.junit)
