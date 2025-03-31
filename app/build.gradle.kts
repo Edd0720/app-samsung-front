@@ -61,6 +61,7 @@ dependencies {
     implementation(libs.androidx.navigation.runtime.android)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.espresso.core)
 
     // Testing
     testImplementation(libs.junit)
