@@ -15,6 +15,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
 import com.example.dreamai.presentation.navigation.AppNavigation
 import com.example.dreamai.ui.theme.DREAMAITheme
+import com.example.dreamai.viewmodel.LoginViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,6 +28,7 @@ class MainActivity : ComponentActivity() {
                 val snackbarHostState = remember { SnackbarHostState() }
                 val scope = rememberCoroutineScope()
 
+
                 Scaffold(
                     modifier = Modifier.fillMaxSize(),
                     snackbarHost = { SnackbarHost(hostState = snackbarHostState) }
@@ -35,7 +37,7 @@ class MainActivity : ComponentActivity() {
                         navController = navController,
                         snackbarHostState = snackbarHostState,
                         scope = scope,
-                        healthConnectManager = healthConnectManager
+                        healthConnectManager = healthConnectManager,
                     )
                 }
             }

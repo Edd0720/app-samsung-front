@@ -31,5 +31,8 @@ const val UID_NAV_ARGUMENT = "uid"
  *     all screens in the navigation graph are intended to be directly reached from the menu).
  */
 enum class Screen(val route: String, val titleId: Int, val hasMenuItem: Boolean = true) {
-  SleepSessions("sleep_session", R.string.sleep_sessions) // Nueva pantalla agregada
+  SleepSessions("sleep_session", R.string.sleep_sessions), // Nueva pantalla agregada
+  HomeScreen("home",R.string.home),
+  LoginScreen("login",R.string.login),
+  RegisterScreen("register", R.string.register)
 }

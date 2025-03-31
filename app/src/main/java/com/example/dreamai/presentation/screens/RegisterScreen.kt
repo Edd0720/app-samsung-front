@@ -13,12 +13,15 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavHostController
 
 @Composable
 fun RegisterScreen(
-    onRegisterClick: (String, String, String, String, Int) -> Unit,
-    onNavigateToLogin: () -> Unit
+    navHostController: NavHostController
 ) {
+    fun onRegisterClick () {
+
+    }
     // Estados para los campos
     var name by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
@@ -220,7 +223,7 @@ fun RegisterScreen(
 
                     // Si no hay errores, proceder con el registro
                     if (!nameError && !emailError && !passwordError && !confirmError && !ageError && !genderError) {
-                        onRegisterClick(name, email, password, selectedGender, age.toInt())
+                        onRegisterClick()
                     }
                 },
                 modifier = Modifier
@@ -231,7 +234,7 @@ fun RegisterScreen(
             }
 
             TextButton(
-                onClick = onNavigateToLogin,
+                onClick = { navHostController.navigate("login") },
                 modifier = Modifier.padding(top = 16.dp)
             ) {
                 Text("¿Ya tienes cuenta? Inicia sesión",color = textColor)
@@ -240,13 +243,3 @@ fun RegisterScreen(
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun RegisterPreview() {
-    MaterialTheme {
-        RegisterScreen(
-            onRegisterClick = { _, _, _, _, _ -> },
-            onNavigateToLogin = {}
-        )
-    }
-}

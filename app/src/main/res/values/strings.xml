@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">DREAM AI</string>
     <string name="sleep_sessions">Sesiones de sueño</string>
+    <string name="home">Home</string>
+    <string name="login">Login</string>
+    <string name="register">Registro</string>
 </resources>
